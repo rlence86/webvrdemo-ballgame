@@ -1,0 +1,29 @@
+{
+	"name": "webvrdemo",
+	"description": "A demo with A-Frame to show WebVR capabilities",
+	"version": "0.0.1",
+	"private": true,
+	"license": "MIT",
+	"scripts": {
+		"start": "budo --live --verbose --port 3000 --open",
+		"deploy": "ghpages",
+		"ghpages": "ghpages",
+		"build": "webpack"
+	},
+	"devDependencies": {
+		"budo": "^7.0.0",
+		"ghpages": "0.0.3",
+		"webpack": "^5.9.0",
+		"webpack-cli": "^4.2.0"
+	},
+	"keywords": [
+		"aframe",
+		"aframe-demo",
+		"webvr",
+		"vr"
+	],
+	"dependencies": {
+		"aframe-environment-component": "^2.0.0",
+		"aframe-physics-system": "^4.0.1"
+	}
+}

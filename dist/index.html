@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>WebVR Games test</title>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+        <script src="https://unpkg.com/aframe-aabb-collider-component@3.1.0/dist/aframe-aabb-collider-component.min.js"></script>
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <a-scene renderer="antialias: true">
+            <!--<a-entity>
+                <a-camera>
+                    <a-cursor raycaster="objects: .ui"></a-cursor>
+                </a-camera>
+            </a-entity>-->
+            <a-assets>
+                <a-asset-item id="platform" src="assets/models/platform/scene.gltf"></a-asset-item>
+                <img id="left" src="assets/images/ball_game.png"></img>
+                <img id="sun" src="assets/images/2k_sun.jpg"></img>
+                <audio id="ball-sound" src="assets/sounds/ball_sound.wav"></audio>
+                <audio id="ball-fail" src="assets/sounds/fail.wav"></audio>
+                <audio id="ball-ok" src="assets/sounds/ball_ok.wav"></audio>
+                <audio id="gameover" src="assets/sounds/gameover.wav"></audio>
+                <audio id="ball-game-sound" src="assets/sounds/ball_game_welcome.wav"></audio>
+                <audio id="background-sound" src="assets/sounds/317365__frankum__tecno-pop-base-and-leads.mp3"></audio>
+                <a-mixin id="animated-menu-item" animation__enter="property: position; 
+                                                                to: 0 2.2 0; 
+                                                                startEvents: mouseenter; 
+                                                                dur: 250; 
+                                                                easing: linear"
+                                                   animation__leave="property: position; 
+                                                                to: 0 2 0; 
+                                                                startEvents: mouseleave; 
+                                                                dur: 250; 
+                                                                easing: linear"></a-mixin>
+            </a-assets>
+            <a-entity id="scene-elements" position="0 -0.6 0" sound="src: #background-sound; autoplay: true; loop: true; positional: false; volume: 0.1">                
+                <a-entity environment="preset: tron"></a-entity>        
+                <a-entity>
+                    <a-entity gltf-model="#platform" scale="0.002 0.002 0.002"></a-entity>
+                </a-entity>
+            </a-entity>
+            <a-entity id="game-placeholder" game>
+            </a-entity>
+        </a-scene>
+    </body>
+</html>
